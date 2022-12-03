@@ -3,7 +3,7 @@ import Foundation
 let lines = try String(contentsOfFile: "input.txt", encoding: .utf8).split(separator: "\n")
 
 func rucksackPriority(_ char: Character) -> Int {
-  let ascii = Int(String(char).unicodeScalars.first!.value)
+  let ascii = Int(char.asciiValue!)
   if ascii >= 97 && ascii <= 122 {
     return ascii - 96
   } else if ascii >= 65 && ascii <= 90 {
